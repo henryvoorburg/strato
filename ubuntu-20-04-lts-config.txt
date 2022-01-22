@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Voeg een nieuwe gebruiker toe (inc homedir, etc...)
+
+$ adduser henry
+
+$ usermod -a -G sudo henry
+
+# Taalconfiguratie-instellingen
+
+$ apt -y install language-pack-en-base language-pack-en
+
+# Toon huidige instellingen
+$ localectl 
+# ...
+
+# Toon overzicht met 'locales'
+$ localectl list-locales
+
+# Configureer 'locale'
+$ localectl set-locale LANG=en_US.UTF-8
+# ...
+
+# Toon nieuwe instellingen!
+$ localectl
+# ...
